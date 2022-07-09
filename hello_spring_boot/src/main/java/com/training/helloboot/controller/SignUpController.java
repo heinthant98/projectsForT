@@ -47,7 +47,6 @@ public class SignUpController {
 				
 				req.login(email, password);
 			} catch (ServletException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
