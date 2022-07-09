@@ -35,15 +35,23 @@ public class SignUpController {
 			@RequestParam String email, 
 			@RequestParam String password,
 			HttpServletRequest req) {
+			
+			try {
+				Account acc = new Account();
+				acc.setName(name);
+				acc.setEmail(email);
+				acc.setPassword(passwordEncoder.encode(password));
+				acc.setRole(Role.Student);
+				
+				repo.save(acc);
+				
+				req.login(email, password);
+			} catch (ServletException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 		
-		Account acc = new Account();
-		acc.setName(name);
-		acc.setEmail(email);
-		acc.setPassword(passwordEncoder.encode(password));
-		acc.setRole(Role.Student);
-		
-		repo.save(acc);
-		
-		return "redirect:/";
+		return "redirect:/home";
 	}
 }
