@@ -14,7 +14,7 @@ import com.training.helloboot.repo.AccountRepo;
 @Service
 public class AccountUserDetailService implements UserDetailsService {
 
-	private AccountRepo repo;
+	private final AccountRepo repo;
 
 	public AccountUserDetailService(AccountRepo repo) {
 		super();

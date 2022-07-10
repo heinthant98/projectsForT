@@ -13,9 +13,9 @@ import com.training.helloboot.repo.AccountRepo;
 @Component
 public class UserInitializer {
 
-	private PasswordEncoder passwordEncoder;
+	private final PasswordEncoder passwordEncoder;
 
-	private AccountRepo accountRepo;
+	private final AccountRepo accountRepo;
 
 	public UserInitializer(PasswordEncoder passwordEncoder, AccountRepo accountRepo) {
 		super();

@@ -18,9 +18,9 @@ import com.training.helloboot.repo.AccountRepo;
 @RequestMapping("/sign-up")
 public class SignUpController {
 
-	private BCryptPasswordEncoder passwordEncoder;
+	private final BCryptPasswordEncoder passwordEncoder;
 
-	private AccountRepo repo;
+	private final AccountRepo repo;
 
 	public SignUpController(BCryptPasswordEncoder passwordEncoder, AccountRepo repo) {
 		super();

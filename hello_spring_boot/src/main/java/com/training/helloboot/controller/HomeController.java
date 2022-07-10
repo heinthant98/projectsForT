@@ -14,7 +14,7 @@ import com.training.helloboot.repo.AccountRepo;
 @RequestMapping("/home")
 public class HomeController {
 
-	private AccountRepo accountRepo;
+	private final AccountRepo accountRepo;
 		
 	public HomeController(AccountRepo accountRepo) {
 		super();
