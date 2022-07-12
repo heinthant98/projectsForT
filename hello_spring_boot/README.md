@@ -33,7 +33,7 @@ Login するときUserを確認することと Logout したら　ホームペ�
 
 <img width="700" src="https://user-images.githubusercontent.com/100908505/178414780-35d7d6b7-4388-4c9a-8466-7b08fe5e99c1.png">
 
-http://localhost:8080/ をアクセスすると検索画面が表示される
+http://localhost:8080/homepage をアクセスすると検索画面が表示される
 
 **検索画面**
 
