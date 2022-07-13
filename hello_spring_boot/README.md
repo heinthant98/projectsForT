@@ -15,7 +15,7 @@
 画面遷移の制御とRepoを呼び出しことを担当する。
 
 ### Service
-User の呼び出し、そしてもし、User がない場合は User(admin)をdatabaseに作成することを担当する。
+業務処理の提供を担当する。
 
 ### Repo
 CRUD処理を担当する。
