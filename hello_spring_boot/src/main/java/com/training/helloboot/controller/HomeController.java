@@ -2,7 +2,6 @@ package com.training.helloboot.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,9 +14,13 @@ import com.training.helloboot.repo.AccountRepo;
 @RequestMapping("/home")
 public class HomeController {
 
-	@Autowired
-	private AccountRepo accountRepo;
-	
+	private final AccountRepo accountRepo;
+		
+	public HomeController(AccountRepo accountRepo) {
+		super();
+		this.accountRepo = accountRepo;
+	}
+
 	@GetMapping
 	public String index(HttpServletRequest req) {
 		var loginId = req.getRemoteUser();

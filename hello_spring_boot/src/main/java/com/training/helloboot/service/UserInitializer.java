@@ -1,6 +1,5 @@
 package com.training.helloboot.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -13,15 +12,21 @@ import com.training.helloboot.repo.AccountRepo;
 
 @Component
 public class UserInitializer {
-	@Autowired
-	private PasswordEncoder passwordEncoder;
-	@Autowired
-	private AccountRepo accountRepo;
-	
+
+	private final PasswordEncoder passwordEncoder;
+
+	private final AccountRepo accountRepo;
+
+	public UserInitializer(PasswordEncoder passwordEncoder, AccountRepo accountRepo) {
+		super();
+		this.passwordEncoder = passwordEncoder;
+		this.accountRepo = accountRepo;
+	}
+
 	@Transactional
 	@EventListener(classes = ContextRefreshedEvent.class)
 	public void initializeUser() {
-		if(accountRepo.count() == 0) {
+		if (accountRepo.count() == 0) {
 			var account = new Account();
 			account.setEmail("admin@gmail.com");
 			account.setName("Admin");
@@ -30,6 +35,5 @@ public class UserInitializer {
 			accountRepo.save(account);
 		}
 	}
-	
 
 }
