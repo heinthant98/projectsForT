@@ -50,6 +50,7 @@ conf/  docker-compose.yml  Dockerfile  LICENSE  mvnw*  mvnw.cmd  pom.xml  README
 ただし初回は時間がかかります。
 出力内容も下記より多いです。
 ```bash
+$ docker compose up -d
 [+] Running 2/2
  - Network projectsForT_default  Created                                                                      0.9s
  - Container Mysql_Intern_db        Started                                                                      1.9s

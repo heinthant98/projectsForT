@@ -1,12 +1,12 @@
-drop table if exists account;
+DROP TABLE IF EXISTS account;
 
-create table account(
-	id int primary key not null auto_increment,
-    email varchar(50) not null unique,
-    name varchar(50) not null,
-    role int not null,
-    password varchar(255) not null
+CREATE TABLE account (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    email VARCHAR(50) NOT NULL UNIQUE,
+    name VARCHAR(50) NOT NULL,
+    role INT NOT NULL,
+    password VARCHAR(255) NOT NULL
 );
 
-insert into account(email, name, role, password) values
+INSERT INTO account(email, name, role, password) VALUES
 	('admin@gmail.com', 'admin', 0, '$2a$10$V2P4daPnPXxBsYNGNpBwmu.A91IXrzyJUUsU8E21Iz5foXhVlN3Sq');
