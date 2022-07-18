@@ -8,6 +8,7 @@
 - Spring boot 2.7.1
 - ThymeLeaf view
 - Spring Security
+- Docker
 - MySQL
 
 ## 名レイヤの責務
@@ -139,10 +140,6 @@ mysql> select * from account;
 1 row in set (0.00 sec)
 ```
 
-アプリを始める前にまずMySQL Databaseに'intern_db'の名前でdatabase作成してください。
-
-<img width="700" height="200" alt="database作成" src="https://user-images.githubusercontent.com/100908505/178402989-f0e31ceb-8f66-4bd4-ad3f-581dbcea7795.png">
-
 **起動成功時のイメージ**
 
 <img width="700" src="https://user-images.githubusercontent.com/100908505/178414780-35d7d6b7-4388-4c9a-8466-7b08fe5e99c1.png">
@@ -189,7 +186,7 @@ http://localhost:8080/homepage をアクセスすると検索画面が表示さ�
 
 <img src="https://user-images.githubusercontent.com/100908505/178428233-8588acfd-db7d-4e21-a6e7-668ab5d94e6b.png">
 
-ログアウトする。
+Mysqlをログアウトする。
 ```bash
 mysql> exit
 Bye
