@@ -185,7 +185,7 @@ http://localhost:8080/homepage をアクセスすると検索画面が表示さ�
 
 <img src="https://user-images.githubusercontent.com/100908505/178428233-8588acfd-db7d-4e21-a6e7-668ab5d94e6b.png">
 
-ログアウトする。
+Mysqlをログアウトする。
 ```bash
 mysql> exit
 Bye
