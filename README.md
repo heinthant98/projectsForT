@@ -139,10 +139,6 @@ mysql> select * from account;
 1 row in set (0.00 sec)
 ```
 
-アプリを始める前にまずMySQL Databaseに'intern_db'の名前でdatabase作成してください。
-
-<img width="700" height="200" alt="database作成" src="https://user-images.githubusercontent.com/100908505/178402989-f0e31ceb-8f66-4bd4-ad3f-581dbcea7795.png">
-
 **起動成功時のイメージ**
 
 <img width="700" src="https://user-images.githubusercontent.com/100908505/178414780-35d7d6b7-4388-4c9a-8466-7b08fe5e99c1.png">
